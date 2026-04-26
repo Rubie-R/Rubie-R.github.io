@@ -1,0 +1,136 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#85fad3",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#08917a",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#0b0a0f",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#0b0a0fe6",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#0f8a610d",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				},
+				{
+					"color": "#fafafa",
+					"name": "Quaternary",
+					"slug": "quaternary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/avatar": {
+				"filter": {
+					"duotone": "var(--wp--preset--duotone--grayscale)"
+				}
+			},
+			"core/button": {
+				"border": {
+					"bottom": {
+						"color": "var(--wp--preset--color--contrast)",
+						"style": "solid",
+						"width": "1px"
+					},
+					"left": {
+						"color": "var(--wp--preset--color--contrast)",
+						"style": "solid",
+						"width": "1px"
+					},
+					"radius": {
+						"bottomLeft": "4px",
+						"bottomRight": "4px",
+						"topLeft": "4px",
+						"topRight": "4px"
+					},
+					"right": {
+						"color": "var(--wp--preset--color--contrast)",
+						"style": "solid",
+						"width": "1px"
+					},
+					"top": {
+						"color": "var(--wp--preset--color--contrast)",
+						"style": "solid",
+						"width": "1px"
+					}
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-sc)",
+					"fontStyle": "normal",
+					"fontWeight": "600",
+					"letterSpacing": "0rem"
+				}
+			},
+			"core/post-title": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "600"
+				}
+			},
+			"core/site-tagline": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-sc)",
+					"fontStyle": "normal",
+					"fontWeight": "600",
+					"letterSpacing": "-0.025rem"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-sc)",
+					"fontStyle": "normal",
+					"fontWeight": "600",
+					"letterSpacing": "0rem"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"letterSpacing": "0rem"
+				}
+			},
+			"h2": {
+				"typography": {
+					"letterSpacing": "0rem"
+				}
+			},
+			"h3": {
+				"typography": {
+					"letterSpacing": "0rem"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-sc)",
+					"fontStyle": "normal",
+					"fontWeight": "600"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--zalando-sans)"
+		}
+	},
+	"version": 3,
+	"title": "Mastermint"
+}

@@ -1,0 +1,169 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#fada38",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#d92662",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#0b0a0f",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#0b0a0fe6",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#fada380d",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				},
+				{
+					"color": "#fafafa",
+					"name": "Quaternary",
+					"slug": "quaternary"
+				}
+			]
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"name": "S",
+					"size": "0.8125rem",
+					"slug": "small"
+				},
+				{
+					"fluid": {
+						"max": "1.125rem",
+						"min": "1rem"
+					},
+					"name": "M",
+					"size": "1.125rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"max": "1.5rem",
+						"min": "1.5rem"
+					},
+					"name": "L",
+					"size": "1.5rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"max": "1.75rem",
+						"min": "1.5rem"
+					},
+					"name": "XL",
+					"size": "1.75rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"max": "2.25rem",
+						"min": "1.75rem"
+					},
+					"name": "XXL",
+					"size": "2.25rem",
+					"slug": "xx-large"
+				},
+				{
+					"fluid": {
+						"max": "3rem",
+						"min": "2.5rem"
+					},
+					"name": "3XL",
+					"size": "3rem",
+					"slug": "xxx-large"
+				},
+				{
+					"fluid": {
+						"max": "4rem",
+						"min": "3.75rem"
+					},
+					"name": "4XL",
+					"size": "4rem",
+					"slug": "xxxx-large"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/avatar": {
+				"filter": {
+					"duotone": "var(--wp--preset--duotone--grayscale)"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-se)",
+					"fontStyle": "normal",
+					"fontWeight": "400",
+					"letterSpacing": "0rem"
+				}
+			},
+			"core/post-title": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "600"
+				}
+			},
+			"core/query-title": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "600"
+				}
+			},
+			"core/site-tagline": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "600",
+					"letterSpacing": "0rem"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-se)",
+					"fontStyle": "normal",
+					"fontWeight": "500",
+					"letterSpacing": "0rem"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"letterSpacing": "0rem"
+				}
+			},
+			"h2": {
+				"typography": {
+					"letterSpacing": "0rem"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--zalando-sans-se)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--uncut-sans)"
+		}
+	},
+	"version": 3,
+	"title": "Goldmine"
+}

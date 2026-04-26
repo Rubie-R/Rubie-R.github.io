@@ -1,0 +1,159 @@
+/*
+Theme Name: Launchit
+Theme URI: https://themeshaper.com/launchit/
+Author: Automattic
+Author URI: https://automattic.com
+Description: This theme is designed to showcase a single product, plugin, or digital service. Featuring large typography, plenty of spacing, and an elegant visual rhythm, it’s perfect for landing pages that aim to build confidence and guide visitors toward action. Whether you’re launching a plugin, highlighting a development tool, or simply introducing your latest creation to the world, this theme helps you present it beautifully.
+Requires at least: 6.8
+Tested up to: 6.8
+Requires PHP: 7.2
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: launchit
+Tags: blog, block-styles, featured-images, full-site-editing, two-columns, wide-blocks, rtl-language-support, style-variations, threaded-comments, translation-ready
+
+/* Progresive enhancement to reduce widows and orphans.
+/* https://github.com/WordPress/gutenberg/issues/55190
+*/
+
+h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption {
+    text-wrap: pretty;
+}
+p {
+    text-wrap: pretty;
+}
+
+/*
+ * Control the hover stylings of outline block style.
+ * Unnecessary once block styles are configurable via theme.json
+ * https://github.com/WordPress/gutenberg/issues/42794
+ */
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover {
+	background-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--base);
+	border-color: var(--wp--preset--color--secondary);
+}
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+	text-decoration-thickness: .0625em !important;
+	text-underline-offset: .15em;
+}
+
+/* ===== Header Fixed reveal after scrolling ===== */
+
+/* Fixed header: hidden off-canvas by default, slides in after .is-on */
+.reveal-after-scrolling {
+  position: fixed;
+  top: 0;            /* will be offset for admin bar below */
+  left: 0;
+  right: 0;
+  transform: translateY(-120%);  /* move out of view */
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .25s ease, opacity .25s ease, visibility 0s linear .25s;
+  z-index: 10000;    /* above hero/covers/etc */
+}
+
+/* Visible state */
+.reveal-after-scrolling.is-on {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform .25s ease, opacity .25s ease, visibility 0s;
+}
+
+/* We don't need sticky on the child when parent is fixed */
+.reveal-after-scrolling .stick-top,
+.reveal-after-scrolling.stick-top {
+  position: static;
+  top: auto;
+}
+
+/* Default: no offset for logged-out users */
+.reveal-after-scrolling { top: 0; }
+
+/* Logged-in: offset for the WP admin bar */
+body.admin-bar .reveal-after-scrolling { top: 32px !important; }
+
+/* Mobile: taller admin bar */
+@media (max-width: 782px) {
+  body.admin-bar .reveal-after-scrolling { top: 0px !important; }
+}
+
+/* Editor-only: always show the fixed header while editing */
+.editor-styles-wrapper .reveal-after-scrolling {
+  position: static !important;
+  top: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Remove extra space around images */
+.wp-block-image img {
+  display: block;
+}
+
+/* Thin link underlines */
+.wp-site-blocks a:where(:not(.wp-element-button)) {
+    text-decoration-thickness: max(0.010em, 0.005em);
+    text-underline-offset: max(0.1em, 0.08em);
+}
+
+/* Desktop-only sticky column */
+@media (min-width: 1024px) {
+  .sticky-col {
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* prevents full-height columns from stretching it */
+    z-index: 5; /* above backgrounds */
+  }
+
+  /* If you’re logged in, offset for the admin bar so it isn’t covered */
+  body.admin-bar .sticky-col { top: 32px; }
+  @media (max-width: 782px) {
+    body.admin-bar .sticky-col { top: 46px; }
+  }
+}
+
+/* Let the overlay use the viewport, not the transformed header */
+.reveal-after-scrolling:has(.wp-block-navigation__responsive-container.is-menu-open) {
+  transform: none !important; /* key fix: removes the containing block */
+}
+
+/* Make the mobile overlay a true fullscreen layer */
+.wp-block-navigation__responsive-container.is-menu-open {
+  position: fixed !important;
+  inset: 0 !important;                 /* top/right/bottom/left: 0 */
+  height: auto !important;
+  max-height: none !important;
+  z-index: 10003;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: var(--admin-offset, 0);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Keep header interaction sane */
+.reveal-after-scrolling { pointer-events: none; }
+.reveal-after-scrolling.is-on { pointer-events: auto; }
+
+/* Admin bar offset for the overlay */
+@media (max-width: 782px) {
+  body.admin-bar .wp-block-navigation__responsive-container.is-menu-open { padding-top: 46px; }
+}
+@media (min-width: 783px) {
+  body.admin-bar .wp-block-navigation__responsive-container.is-menu-open { padding-top: 32px; }
+}
+
+/* Buttons stay above overlay content */
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close {
+  position: relative;
+  z-index: 10004;
+}
